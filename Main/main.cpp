@@ -123,11 +123,11 @@ void realizaTestes() {
     }
 
     catalogo->removeMidia(cd2->getTitulo());
-
     // Verificando lista (seleciona pelo tipo - CD de música - implementada
     // pela classe CD)
     
-    if (catalogo->quantidadeDeDVDs() != 1) {
+    if (catalogo->quantidadeDeCDs() != 1) {
+
         throw 11;
     }
 

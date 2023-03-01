@@ -17,18 +17,14 @@ bool Catalogo::adicionaMidia(Midia &conteudo)
 }
 
 bool Catalogo::removeMidia(std::string titulo)
-{
-    for(int i = 0; i < midia.size(); i++)
+{ 
+    for(int i = 0; i < midia.size(); ++i)
     {
-        std::cout << "aqui" << std::endl;
-        if(titulo == midia[i]->getTitulo())
+        if(midia[i]->getTitulo() == titulo)
         {
-            std::cout << "Removendo..." << std::endl;
             midia.erase(midia.begin() + i);
-            delete midia[i];
-            std::cout << "tamanho do vetor = " << midia.size()<< std::endl;
-        }
             return true;
+        }
     }
     return false;
 }
