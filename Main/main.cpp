@@ -1,9 +1,10 @@
 #include <cstdlib>
+#include <iostream>
 
-#include "CD/cd.h"
-#include "DVD/dvd.h"
-#include "Catalogo/catalogo.h"
-#include "Jogo/jogo.h"
+#include "../CD/cd.h"
+#include "../DVD/dvd.h"
+#include "../Catalogo/catalogo.h"
+#include "../Jogo/jogo.h"
 
 using namespace std;
 using namespace catalogo;

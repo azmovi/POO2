@@ -1,17 +1,13 @@
-#include <iostream>
-#include <string>
-#include <vector>
-#include <utility>
 #include "dvd.h"
 
-Dvd::Dvd(const std::string& titulo, const int ano, std::string& diretor)
+DVD::DVD(const std::string& titulo, const int ano, std::string& diretor)
     :Midia(titulo, ano), diretor(diretor) {}
 
-virtual int Dvd::getTipo() override
+int DVD::getTipo() 
 {
     return 2;
 }
-virtual void Dvd::imprimeDados() override
+void DVD::imprimeDados() 
 {
     for(int i = 1; i < elenco.size(); ++i)
     {
@@ -19,18 +15,18 @@ virtual void Dvd::imprimeDados() override
             ", papel: " << elenco[i].second << std::endl;
     }
 }
-void Dvd::adcionaArtista(std::string artista, std::string papel)
+void DVD::adicionaArtista(std::string artista, std::string papel)
 {
     std::pair<std::string, std::string> par = {artista, papel};
     elenco.push_back(par);
 }
 
-std::string Dvd::getDiretor()
+std::string DVD::getDiretor()
 {
     return this->diretor;
 }
 
-void Dvd::setDiretor(std::string diretor)
+void DVD::setDiretor(std::string diretor)
 {
     this->diretor = diretor;
 }

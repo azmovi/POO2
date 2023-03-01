@@ -5,13 +5,12 @@
 
 #include "catalogo.h"
 
-Catalogo::Catalogo()
 
-bool Catalogo::adcionaMidia(Midia& conteudo)
+bool Catalogo::adicionaMidia(Midia &conteudo)
 {
     int old = midia.size();
     midia.push_back(conteudo);
-    return (midia.size() > old)
+    return (midia.size() > old);
 }
 
 bool Catalogo::removeMidia(std::string titulo)
@@ -20,7 +19,7 @@ bool Catalogo::removeMidia(std::string titulo)
     {
         if(titulo == midia[i]->getTitulo())
         {
-            midia.erase(i);
+            midia.erase(midia.begin() + 1);
             return true;
         }
     }
@@ -31,7 +30,7 @@ Midia* Catalogo::obtemMidia(std::string titulo)
 {
     for(int i = 0; i < midia.size(); ++i)
     {
-        if(titulo == midia[i]->getTitulo)
+        if(titulo == midia[i]->getTitulo())
         {
             return midia[i];
         }
@@ -39,7 +38,7 @@ Midia* Catalogo::obtemMidia(std::string titulo)
     return nullptr;
 }
 
-int Catalogo::quantidadeDeMidia()
+int Catalogo::quantidadeDeMidias()
 {
     return midia.size();
 }
@@ -87,7 +86,7 @@ bool comparador(Midia *primeiro, Midia *segundo)
 {
     if(primeiro->getAno() == segundo->getAno())
     {
-        return (primeiro->getTitulo() < segundo->getTitulo);
+        return (primeiro->getTitulo() < segundo->getTitulo());
     }
     return (primeiro->getAno() > segundo->getAno());
 }
@@ -101,12 +100,12 @@ void Catalogo::imprimeColecao()
     }
 }
 
-void Catalogo::imprimeColecaoPorTipo(int value);
+void Catalogo::imprimeColecaoPorTipo(int value)
 {
     std::sort(midia.begin(), midia.end(), comparador);
     for(int i = 0; i < midia.size(); ++i)
     {
-        if(midia[i]->getTipo() == int value)
+        if(midia[i]->getTipo() == value)
         {
             midia[i]->imprimeFicha();
         }

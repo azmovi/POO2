@@ -7,7 +7,6 @@ class Jogo : public Midia
 {
 private:
     std::string genero;
-
 public:
     Jogo(const std::string& titulo, const int ano, const std::string& genero);
 

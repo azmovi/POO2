@@ -10,15 +10,14 @@ private:
 public:
     Catalogo();
     
-    bool adcionaMidia(Midia&);
+    bool adicionaMidia(Midia&);
     bool removeMidia(std::string);
     Midia* obtemMidia(std::string);
-    int quantidadeDeMidia();
+    int quantidadeDeMidias();
     int quantidadeDeCDs();
     int quantidadeDeDVDs();
     int quantidadeDeJogos();
     void imprimeColecao();
     void imprimeColecaoPorTipo(int);
-    bool comparador(Midia*, Midia*);
 };
 #endif
