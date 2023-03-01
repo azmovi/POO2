@@ -6,8 +6,8 @@
 #include "../Catalogo/catalogo.h"
 #include "../Jogo/jogo.h"
 
-using namespace std;
 using namespace catalogo;
+using namespace std;
 
 void realizaTestes() {
     CD *cd1, *cd2;
@@ -127,7 +127,7 @@ void realizaTestes() {
     // Verificando lista (seleciona pelo tipo - CD de música - implementada
     // pela classe CD)
     
-    if (catalogo->quantidadeDeCDs() != 1) {
+    if (catalogo->quantidadeDeDVDs() != 1) {
         throw 11;
     }
 

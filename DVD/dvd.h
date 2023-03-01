@@ -14,7 +14,7 @@ private:
     std::string diretor;
     std::vector<std::pair<std::string, std::string>> elenco;
 public:
-    DVD(const std::string& titulo, const int ano, std::string& diretor);
+    DVD(const std::string& titulo, const int ano, const std::string& diretor);
     
     int getTipo() override;
     void imprimeDados() override;

@@ -10,9 +10,9 @@ int CD::getTipo()
 void CD::imprimeDados() 
 {
     std::cout << "Artista: " << this->artista <<std::endl;
-    for(int i = 1; i < faixa.size() + 1; ++i)
+    for(int i = 0; i < faixa.size(); ++i)
     {
-        std::cout << "Faixa" << i << ": " << faixa[i].first << ", duração: " 
+        std::cout << "Faixa" << i+1 << ": " << faixa[i].first << ", duração: " 
             << faixa[i].second <<std::endl;
     }
 }

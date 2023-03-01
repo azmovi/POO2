@@ -5,23 +5,30 @@
 
 #include "catalogo.h"
 
+using namespace catalogo;
+
+Catalogo::Catalogo() {}
 
 bool Catalogo::adicionaMidia(Midia &conteudo)
 {
     int old = midia.size();
-    midia.push_back(conteudo);
+    midia.push_back(&conteudo);
     return (midia.size() > old);
 }
 
 bool Catalogo::removeMidia(std::string titulo)
 {
-    for(int i = 0; i < midia.size(); ++i)
+    for(int i = 0; i < midia.size(); i++)
     {
+        std::cout << "aqui" << std::endl;
         if(titulo == midia[i]->getTitulo())
         {
-            midia.erase(midia.begin() + 1);
-            return true;
+            std::cout << "Removendo..." << std::endl;
+            midia.erase(midia.begin() + i);
+            delete midia[i];
+            std::cout << "tamanho do vetor = " << midia.size()<< std::endl;
         }
+            return true;
     }
     return false;
 }

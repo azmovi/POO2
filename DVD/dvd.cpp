@@ -1,6 +1,6 @@
 #include "dvd.h"
 
-DVD::DVD(const std::string& titulo, const int ano, std::string& diretor)
+DVD::DVD(const std::string& titulo, const int ano, const std::string& diretor)
     :Midia(titulo, ano), diretor(diretor) {}
 
 int DVD::getTipo() 
@@ -9,9 +9,9 @@ int DVD::getTipo()
 }
 void DVD::imprimeDados() 
 {
-    for(int i = 1; i < elenco.size(); ++i)
+    for(int i = 0; i < elenco.size(); ++i)
     {
-        std::cout << "Artista" << i << ": " << elenco[i].first <<
+        std::cout << "Artista" << i+1 << ": " << elenco[i].first <<
             ", papel: " << elenco[i].second << std::endl;
     }
 }
