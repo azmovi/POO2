@@ -1,7 +1,7 @@
 #ifndef _CD_H
 #define _CD_H 
 
-#include "midia.h"
+#include <../Midia/midia.h>
 
 class Cd : public Midia
 {
